@@ -44,7 +44,7 @@ export const sharpsPR = {
   title: "Sharps Digital PR",
   eyebrow: "Social Media & Content",
   description:
-    "I'm the Digital PR Manager for S#arps of Boston College — curating our Instagram feed, reaching new audiences, and creating videos to promote our club on campus.",
+    "I'm the Digital PR Manager for S#arps of Boston College — curating our Instagram feed, reaching new audiences, and creating videos to promote our club on campus. In collaboration with the rest of the E-Board, our efforts have doubled audition turnout during my time in the role, growing from an average of 20 auditioners per semester to 43 — a turnout comparable to mixed-gender a cappella groups despite S#arps being single-gender.",
   instagramProfile: "https://www.instagram.com/bcsharps/",
   reels: [
     {
