@@ -8,7 +8,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/sierra-judy-115a55369/",
   instagram: "https://www.instagram.com/sierraaa_j25?stkn=MXBkdnBmMWg4ZDk2OA%3D%3D&utm_source=qr",
   image: asset("/images/profile.jpg"),
-  bio: "Hi! I'm Sierra, a Boston College student from Oakland, California, studying Communications with minors in Theatre and General Business. I've always been passionate about storytelling and performance, whether on stage or through creative digital content. My background in theatre has taught me how to connect deeply with people, understand different perspectives, and bring ideas to life in a fast-paced environment. I also love using media to spread awareness and build connections across diverse audiences. I'm excited to continue growing my passion for the arts while pursuing my professional interests in business and creative communication.",
+  bio: "Hi! I'm Sierra, a Boston College student from Oakland, California, studying Communications (Honors Track) with minors in Theatre and General Business. I've always been passionate about storytelling and performance, whether on stage or through creative digital content. My background in theatre has taught me how to connect deeply with people, understand different perspectives, and bring ideas to life in a fast-paced environment. I also love using media to spread awareness and build connections across diverse audiences. I'm excited to continue growing my passion for the arts while pursuing my professional interests in business and creative communication.",
 };
 
 export const internship = {
@@ -96,7 +96,8 @@ export const resume = {
       org: "Boston College Morrissey College of Arts & Sciences",
       location: "Chestnut Hill, MA",
       when: "May 2028",
-      subheading: "Bachelor of Arts/Science in Communications, Minor in General Business and Theatre — GPA: 3.55",
+      subheading:
+        "Bachelor of Arts/Science in Communications (Honors Track), Minor in General Business and Theatre — GPA: 3.55",
     },
     {
       org: "Contemporary Theatre and Drama in London",
@@ -156,6 +157,8 @@ export const resume = {
       org: "Buckets",
       role: "Designer & Developer",
       when: "Summer 2026",
+      image: asset("/images/buckets-logo.svg"),
+      imageFit: "contain",
       url: "https://buckets-7til.onrender.com",
       bullets: [
         "Designed and built a game app for golfers to play while waiting on a backed-up course, taking it from concept to live deployment in 3 days.",

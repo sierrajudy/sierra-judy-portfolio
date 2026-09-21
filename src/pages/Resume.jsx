@@ -1,27 +1,17 @@
 import { resume, profile } from "../data/content";
 import "./Resume.css";
 
-function EntryBlock({ heading, subheading, location, when, bullets, image, imageFit, url }) {
+function EntryBlock({ heading, subheading, location, when, bullets, image, imageFit, url, urlLabel }) {
   return (
     <div className="entry">
-      <div className={`entry-row${image ? " has-image" : ""}`}>
-        {image && (
-          <div className={`entry-thumb${imageFit === "contain" ? " entry-thumb-contain" : ""}`}>
-            <img src={image} alt="" />
-          </div>
-        )}
+      <div className="entry-row">
+        <div className={`entry-thumb${!image ? " entry-thumb-empty" : imageFit === "contain" ? " entry-thumb-contain" : ""}`}>
+          {image && <img src={image} alt="" />}
+        </div>
         <div className="entry-main">
           <div className="entry-head">
             <div>
-              <p className="entry-heading">
-                {url ? (
-                  <a href={url} target="_blank" rel="noreferrer" className="entry-heading-link">
-                    {heading} ↗
-                  </a>
-                ) : (
-                  heading
-                )}
-              </p>
+              <p className="entry-heading">{heading}</p>
               {subheading && <p className="entry-sub">{subheading}</p>}
             </div>
             <div className="entry-meta">
@@ -35,6 +25,11 @@ function EntryBlock({ heading, subheading, location, when, bullets, image, image
                 <li key={b}>{b}</li>
               ))}
             </ul>
+          )}
+          {url && (
+            <a href={url} target="_blank" rel="noreferrer" className="btn entry-cta">
+              {urlLabel || "View Project"} ↗
+            </a>
           )}
         </div>
       </div>
@@ -50,7 +45,7 @@ export default function Resume() {
           <div>
             <span className="eyebrow eyebrow-light">Business Resume</span>
             <h1>{profile.name}</h1>
-            <p className="resume-hero-sub">Communications · Business · Theatre — Boston College</p>
+            <p className="resume-hero-sub">Communications (Honors) · Business · Theatre — Boston College</p>
             {resume.contact && <p className="resume-hero-contact">{resume.contact}</p>}
             {resume.pdf && (
               <a href={resume.pdf} download className="btn btn-on-dark resume-download-btn">

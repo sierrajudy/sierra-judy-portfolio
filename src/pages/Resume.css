@@ -126,6 +126,11 @@
   padding: 6px;
 }
 
+.entry-thumb-empty {
+  background: transparent;
+  border-color: transparent;
+}
+
 .entry-head {
   display: flex;
   flex-wrap: wrap;
@@ -140,12 +145,10 @@
   margin: 0;
 }
 
-.entry-heading-link {
-  color: var(--color-primary);
-}
-
-.entry-heading-link:hover {
-  text-decoration: underline;
+.entry-cta {
+  margin-top: 16px;
+  padding: 9px 20px;
+  font-size: 0.85rem;
 }
 
 .entry-sub {

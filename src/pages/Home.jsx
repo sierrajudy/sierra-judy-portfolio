@@ -23,7 +23,7 @@ export default function Home() {
               ))}
             </div>
             <div className="hero-actions">
-              <a href="#sharps-pr" className="btn">
+              <a href="#tahoe-artesian" className="btn">
                 See my work
               </a>
               <Link to="/resume" className="btn btn-outline">
@@ -39,7 +39,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sharps-pr">
+      <section id="tahoe-artesian">
+        <div className="container">
+          <SectionHeader
+            eyebrow="Marketing Internship"
+            title={internship.title}
+            description={internship.description}
+          />
+
+          <p className="video-group-label">Drafts &amp; Concepts</p>
+          <div className="video-grid">
+            {internship.drafts.map((video) => (
+              <LocalVideoCard key={video.title} {...video} draft />
+            ))}
+          </div>
+
+          <p className="video-group-label video-group-label-spaced">Posted</p>
+          <div className="video-grid">
+            {internship.posted.map((video) => (
+              <InstagramEmbed key={video.title} url={video.url} title={video.title} views={video.views} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-alt" id="sharps-pr">
         <div className="container">
           <SectionHeader eyebrow={sharpsPR.eyebrow} title={sharpsPR.title} description={sharpsPR.description} />
 
@@ -63,30 +87,6 @@ export default function Home() {
               caption={sharpsPR.cafePerformance.caption}
               driveId={sharpsPR.cafePerformance.driveId}
             />
-          </div>
-        </div>
-      </section>
-
-      <section className="section-alt" id="tahoe-artesian">
-        <div className="container">
-          <SectionHeader
-            eyebrow="Marketing Internship"
-            title={internship.title}
-            description={internship.description}
-          />
-
-          <p className="video-group-label">Drafts &amp; Concepts</p>
-          <div className="video-grid">
-            {internship.drafts.map((video) => (
-              <LocalVideoCard key={video.title} {...video} draft />
-            ))}
-          </div>
-
-          <p className="video-group-label video-group-label-spaced">Posted</p>
-          <div className="video-grid">
-            {internship.posted.map((video) => (
-              <InstagramEmbed key={video.title} url={video.url} title={video.title} views={video.views} />
-            ))}
           </div>
         </div>
       </section>
