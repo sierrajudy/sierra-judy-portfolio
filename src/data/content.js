@@ -6,7 +6,7 @@ export const profile = {
   name: "Sierra Judy",
   emails: ["sierramariejudy@gmail.com", "judys@bc.edu"],
   linkedin: "https://www.linkedin.com/in/sierra-judy-115a55369/",
-  instagram: "https://www.instagram.com/invites/contact/?igsh=g8ldtakrkkpz&utm_content=3btgqfw",
+  instagram: "https://www.instagram.com/sierraaa_j25?stkn=MXBkdnBmMWg4ZDk2OA%3D%3D&utm_source=qr",
   image: asset("/images/profile.jpg"),
   bio: "Hi! I'm Sierra, a Boston College student from Oakland, California, studying Communications with minors in Theatre and General Business. I've always been passionate about storytelling and performance, whether on stage or through creative digital content. My background in theatre has taught me how to connect deeply with people, understand different perspectives, and bring ideas to life in a fast-paced environment. I also love using media to spread awareness and build connections across diverse audiences. I'm excited to continue growing my passion for the arts while pursuing my professional interests in business and creative communication.",
 };
@@ -44,7 +44,7 @@ export const sharpsPR = {
   title: "Sharps Digital PR",
   eyebrow: "Social Media & Content",
   description:
-    "I'm the Digital PR Manager for S#arps of Boston College — curating our Instagram feed, reaching new audiences, and creating videos to promote our club on campus. In collaboration with the rest of the E-Board, our efforts have doubled audition turnout during my time in the role, growing from an average of 20 auditioners per semester to 43 — a turnout comparable to mixed-gender a cappella groups despite S#arps being single-gender.",
+    "I'm the Digital PR Manager for the Sharps of Boston College, curating our Instagram feed, reaching new audiences, and creating videos to promote our club on campus. In collaboration with the E-Board, our efforts have doubled audition turnout during my time in the role, growing from an average of 20 auditioners per semester to 43, a turnout comparable to mixed-gender a cappella groups on campus.",
   instagramProfile: "https://www.instagram.com/bcsharps/",
   reels: [
     {
