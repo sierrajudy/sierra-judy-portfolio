@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sierra Judy — Portfolio</title>
+    <script>
+      // GitHub Pages SPA fallback: redirect deep links (e.g. /resume) to the
+      // app's index.html, encoding the original path so it can be restored.
+      var base = "/sierra-judy-portfolio";
+      var path = location.pathname.slice(base.length) + location.search + location.hash;
+      sessionStorage.setItem("spa-redirect", path);
+      location.replace(base + "/");
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,72 @@
+.drive-embed {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.drive-embed-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--color-ink);
+}
+
+.drive-embed-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.drive-embed-body {
+  padding: 16px 18px;
+}
+
+.drive-embed-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.drive-embed-caption {
+  margin: 6px 0 0;
+  font-size: 0.86rem;
+  color: var(--color-ink-soft);
+}
+
+.drive-embed-open {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.drive-embed-open:hover {
+  text-decoration: underline;
+}
+
+.drive-embed-empty {
+  aspect-ratio: 16 / 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1.5px dashed var(--color-line);
+  background: var(--color-bg);
+  text-align: center;
+  padding: 20px;
+}
+
+.drive-embed-empty .drive-embed-title {
+  padding: 0;
+}
+
+.drive-embed-placeholder {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}

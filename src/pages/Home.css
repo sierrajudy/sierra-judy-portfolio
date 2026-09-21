@@ -1,0 +1,154 @@
+.hero {
+  padding: 80px 0 100px;
+  position: relative;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5.4vw, 4rem);
+  margin-top: 12px;
+}
+
+.hero-bio {
+  font-size: 1.08rem;
+  max-width: 54ch;
+  color: var(--color-ink-soft);
+}
+
+.hero-emails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-bottom: 32px;
+  font-size: 0.94rem;
+}
+
+.hero-email {
+  font-weight: 600;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.hero-email:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-photo-frame {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+}
+
+.hero-photo-frame::before {
+  content: "";
+  position: absolute;
+  inset: -18px -18px auto auto;
+  top: -20px;
+  right: -20px;
+  width: 88%;
+  height: 88%;
+  background: var(--color-gold);
+  opacity: 0.35;
+  border-radius: var(--radius-lg);
+  z-index: 0;
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.section-alt {
+  background: #f3ede4;
+}
+
+.video-group-label {
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+  margin: 0 0 18px;
+}
+
+.video-group-label-spaced {
+  margin-top: 48px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 28px;
+}
+
+.drive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.sharps-ig-btn {
+  margin-bottom: 36px;
+}
+
+.sharps-ig-placeholder {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 24px;
+  border-radius: 999px;
+  border: 1.5px dashed var(--color-line);
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+
+.reel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.drive-single {
+  max-width: 640px;
+}
+
+@media (max-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    order: -1;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}

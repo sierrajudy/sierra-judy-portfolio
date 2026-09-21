@@ -1,0 +1,15 @@
+.section-header {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  margin-top: 10px;
+}
+
+.section-description {
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+  max-width: 60ch;
+}
