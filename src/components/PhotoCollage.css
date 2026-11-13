@@ -1,8 +1,11 @@
 .collage {
-  --collage-row: 220px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.collage-row {
+  display: flex;
   gap: 10px;
 }
 
@@ -16,12 +19,7 @@
   border-radius: 6px;
   background: #e6ddd0;
   cursor: zoom-in;
-  min-width: 0;
-}
-
-.collage-frame {
-  display: block;
-  width: 100%;
+  flex: 0 0 auto;
 }
 
 .collage-tile img {
@@ -139,11 +137,6 @@
 }
 
 @media (max-width: 860px) {
-  .collage {
-    --collage-row: 140px;
-    gap: 8px;
-  }
-
   .lightbox {
     padding: 64px 12px;
   }
