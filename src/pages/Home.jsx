@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { profile, internship, sharpsPR, gallery, classProjects } from "../data/content";
+import { profile, internship, sharpsPR, gallery, classProjects, buckets } from "../data/content";
 import SectionHeader from "../components/SectionHeader";
 import LocalVideoCard from "../components/LocalVideoCard";
 import DriveEmbed from "../components/DriveEmbed";
@@ -81,6 +81,23 @@ export default function Home() {
               <LocalVideoCard key={video.title} {...video} wide />
             ))}
           </div>
+
+          <p className="video-group-label video-group-label-spaced">Personal Project</p>
+          <article className="project-card">
+            <img src={buckets.logo} alt="" className="project-logo" />
+            <div className="project-body">
+              <h3 className="project-title">{buckets.title}</h3>
+              <p className="project-role">{buckets.role}</p>
+              <ul className="project-bullets">
+                {buckets.bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+              <a href={buckets.url} target="_blank" rel="noreferrer" className="btn project-cta">
+                Play Buckets ↗
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 

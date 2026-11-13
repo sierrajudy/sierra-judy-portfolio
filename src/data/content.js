@@ -61,6 +61,18 @@ export const classProjects = {
   ],
 };
 
+export const buckets = {
+  title: "Buckets",
+  role: "Designer & Developer · Summer 2026",
+  logo: asset("/images/buckets-logo.svg"),
+  url: "https://buckets-7til.onrender.com",
+  bullets: [
+    "Designed and built a game app for golfers to play while waiting on a backed-up course, taking it from concept to live deployment in 3 days.",
+    "Learned and applied Git version control, AI-assisted coding agents, and custom domain deployment to independently ship a functioning web app.",
+    "Iterated through multiple drafts based on direct user feedback, growing to 15+ active players across 8 different golf courses.",
+  ],
+};
+
 export const sharpsPR = {
   title: "Sharps Digital PR",
   eyebrow: "Social Media & Content",
