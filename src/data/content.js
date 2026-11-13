@@ -8,13 +8,13 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/sierra-judy-115a55369/",
   instagram: "https://www.instagram.com/sierraaa_j25?stkn=MXBkdnBmMWg4ZDk2OA%3D%3D&utm_source=qr",
   image: asset("/images/profile.jpg"),
-  bio: "Hi! I'm Sierra, a Boston College student from Oakland, California, studying Communications (Honors Track) with minors in Theatre and General Business. I've always been passionate about storytelling and performance, whether on stage or through creative digital content. My background in theatre has taught me how to connect deeply with people, understand different perspectives, and bring ideas to life in a fast-paced environment. I also love using media to spread awareness and build connections across diverse audiences. I'm excited to continue growing my passion for the arts while pursuing my professional interests in business and creative communication.",
+  bio: "Hi! I'm Sierra, a Boston College student from Oakland, California, majoring in Honors Communication with minors in General Business and Theatre. I've always been passionate about storytelling and performance, whether on stage or through creative digital content. My background in theatre has taught me how to connect deeply with people, understand different perspectives, and bring ideas to life in a fast-paced environment. I also love using media to spread awareness and build connections across diverse audiences. I'm excited to continue growing my passion for the arts while pursuing my professional interests in business and creative communication.",
 };
 
 export const internship = {
   title: "Tahoe Artesian | Marketing Intern",
   description:
-    "Last summer, I interned with Tahoe Artesian Water, a fast-growing startup, as a Digital Marketing Intern. Collaborating closely with the creative team, I was tasked with developing content strategies to engage a younger audience. I researched current digital trends and popular formats, built storyboards to pitch fresh concepts, and led the execution of our campaigns. The result was a dynamic collection of new social media content that strengthened Tahoe Artesian's online presence and brand connection with Gen Z consumers.",
+    "Last summer, I interned with Tahoe Artesian Water, a fast-growing startup, as a Marketing Intern. Collaborating closely with the creative team, I was tasked with developing content strategies to engage a younger audience. I researched current digital trends and popular formats, built storyboards to pitch fresh concepts, and led the execution of our campaigns. The result was a dynamic collection of new social media content that strengthened Tahoe Artesian's online presence and brand connection with Gen Z consumers.",
   drafts: [
     {
       title: "Real Memories. Real Water.",
@@ -36,6 +36,27 @@ export const internship = {
       image: asset("/images/tahoe-always-a-woman.jpg"),
       views: "5,982 views",
       url: "https://www.instagram.com/reel/DNWY-YVSp_n/?stkn=MWQ2N3VobzRlaDV0dA==",
+    },
+  ],
+};
+
+export const classProjects = {
+  eyebrow: "Digital Media Coursework",
+  title: "Digital Media Class Projects",
+  description:
+    "Interview-based video projects from my Digital Media class at Boston College.",
+  videos: [
+    {
+      title: "Sharps A Cappella Interview Project",
+      tag: "Interview",
+      image: asset("/images/class-sharps-interview.jpg"),
+      video: asset("/videos/class-sharps-interview.mp4"),
+    },
+    {
+      title: "Machinal Theatre Interview Project",
+      tag: "Interview",
+      image: asset("/images/class-machinal-interview.jpg"),
+      video: asset("/videos/class-machinal-interview.mp4"),
     },
   ],
 };
@@ -87,17 +108,25 @@ export const sharpsPR = {
   },
 };
 
+// ratio = photo width / height (keeps the collage from cropping). Optional:
+// if left out, it's measured when the photo loads.
+export const gallery = [
+  { src: asset("/images/resume-headshot.jpg"), ratio: 1, caption: "Headshot" },
+  { src: asset("/images/resume-top-girls.jpg"), ratio: 500 / 334, caption: '“Top Girls” — Boston College Theatre, Fall 2025' },
+  { src: asset("/images/resume-theatre-wing.jpg"), ratio: 500 / 333, caption: "Sharps of Boston College A Cappella Group" },
+  { src: asset("/images/resume-spin-instructor.jpg"), ratio: 380 / 500, caption: "Certified Spin Instructor — BC Campus Recreation" },
+];
+
 export const resume = {
-  image: asset("/images/resume-headshot.jpg"),
   pdf: asset("/sierra-judy-resume.pdf"),
-  contact: "Oakland, CA · judys@bc.edu · (510) 677-0991",
+  contact: "Oakland, CA | judys@bc.edu | (510) 677-0991",
   education: [
     {
       org: "Boston College Morrissey College of Arts & Sciences",
       location: "Chestnut Hill, MA",
       when: "May 2028",
       subheading:
-        "Bachelor of Arts/Science in Communications (Honors Track), Minor in General Business and Theatre — GPA: 3.55",
+        "Bachelor of Arts, Honors Communication Major, Minor in General Business and Theatre | GPA: 3.55",
     },
     {
       org: "Contemporary Theatre and Drama in London",
@@ -108,37 +137,45 @@ export const resume = {
       ],
     },
     {
-      org: "Boston College Carroll School of Management Catalyst Program",
+      org: "Carroll School of Management Intensive Business Program",
       location: "Chestnut Hill, MA",
       when: "Summer 2025",
       bullets: [
-        "8-week highly selective summer academic program exposing Liberal Arts students to Management curriculum.",
+        "Selected for Catalyst, a highly selective 8-week summer business program for Liberal Arts students.",
         "Relevant coursework: Accounting, Finance, Marketing, and Excel.",
       ],
     },
   ],
   experience: [
     {
+      org: "Sharps of Boston College A Cappella Group",
+      location: "Chestnut Hill, MA",
+      role: "Digital PR Manager",
+      when: "Winter 2025 - Present",
+      bullets: [
+        "Manage the group’s digital PR, promoting two performances each semester to campus audiences of 100+.",
+        "Perform as an ensemble vocalist, rehearsing three times per week for live concerts and campus events.",
+      ],
+    },
+    {
+      org: "Buckets",
+      role: "Designer & Developer",
+      when: "Summer 2026",
+      url: "https://buckets-7til.onrender.com",
+      bullets: [
+        "Designed and built a game app for golfers to play while waiting on a backed-up course, taking it from concept to live deployment in 3 days.",
+        "Learned and applied Git version control, AI-assisted coding agents, and custom domain deployment to independently ship a functioning web app.",
+        "Iterated through multiple drafts based on direct user feedback, growing to 15+ active players across 8 different golf courses.",
+      ],
+    },
+    {
       org: "Tahoe Artesian Water",
       location: "Truckee, CA",
       role: "Marketing Intern",
-      image: asset("/images/resume-taw-logo.png"),
-      imageFit: "contain",
       when: "Summer 2025",
       bullets: [
         "Designed storyboards and produced video content to help build brand awareness.",
         "Increased product sales at a local event through effective on-site sales strategies.",
-      ],
-    },
-    {
-      org: "Boston College Campus Recreation",
-      location: "Chestnut Hill, MA",
-      role: "Certified Spin Instructor",
-      when: "Winter 2025 – Present",
-      image: asset("/images/resume-spin-instructor.jpg"),
-      bullets: [
-        "Design and instruct weekly spin class programs aligned with fitness trends and popular music.",
-        "Driving community engagement through themed rides, leading with high energy, and developing motivational speaking skills.",
       ],
     },
     {
@@ -152,29 +189,13 @@ export const resume = {
       ],
     },
   ],
-  projects: [
-    {
-      org: "Buckets",
-      role: "Designer & Developer",
-      when: "Summer 2026",
-      image: asset("/images/buckets-logo.svg"),
-      imageFit: "contain",
-      url: "https://buckets-7til.onrender.com",
-      bullets: [
-        "Designed and built a game app for golfers to play while waiting on a backed-up course, taking it from concept to live deployment in 3 days.",
-        "Learned and applied Git version control, AI-assisted coding agents, and custom domain deployment to independently ship a functioning web app.",
-        "Iterated through multiple drafts based on direct user feedback, expanding to any golf course in the world, with 4 different customized game modes, avatars, achievements, friend profiles, and so much more!",
-      ],
-    },
-  ],
   activities: [
     {
       org: "Boston College Theatre Performances",
       location: "Chestnut Hill, MA",
-      when: "Spring 2025 – Spring 2026",
-      image: asset("/images/resume-top-girls.jpg"),
+      when: "Spring 2025 - Fall 2026",
       bullets: [
-        'Performed in three main-stage productions — "Legally Blonde" (Spring 2026), "Top Girls" (Fall 2025), and "Bonnie and Clyde" (Spring 2025).',
+        'Performed in four main-stage productions – "Machinal" (Fall 2026), "Legally Blonde" (Spring 2026), "Top Girls" (Fall 2025), and "Bonnie and Clyde" (Spring 2025).',
         "Rehearse multiple times per week over six weeks per show, demonstrating commitment to ensemble storytelling, professional rehearsal etiquette, and intensive character work.",
       ],
     },
@@ -182,21 +203,20 @@ export const resume = {
       org: "Musical Theatre Wing of Boston College",
       location: "Chestnut Hill, MA",
       role: "Production Manager",
-      when: "Winter 2025 – Present",
+      when: "Winter 2025 - Present",
       bullets: [
         "Coordinate all event logistics by booking rehearsal and performance spaces and liaising with Boston College facility managers, ensuring 100% venue readiness for each production and cabaret.",
         "Organize and plan accessible theatre for everyone on campus and lead performance-based service events.",
       ],
     },
     {
-      org: "Sharps of Boston College Acapella Group",
+      org: "Boston College Campus Recreation",
       location: "Chestnut Hill, MA",
-      role: "Digital PR Manager",
-      when: "Winter 2025 – Present",
-      image: asset("/images/resume-theatre-wing.jpg"),
+      role: "Certified Spin Instructor",
+      when: "Winter 2025 - Present",
       bullets: [
-        "Rehearse collaboratively three times per week, contributing to the musical preparation and vocal cohesion for two polished performances each semester.",
-        "Perform as an ensemble member in live concerts and campus events, enhancing group stage presence and audience engagement for crowds of 100+ attendees.",
+        "Design and instruct weekly spin class programs aligned with fitness trends and popular music.",
+        "Drive community engagement through themed rides, leading with high energy, and developing motivational speaking skills.",
       ],
     },
   ],
@@ -206,8 +226,8 @@ export const resume = {
     "Advanced Prompt Engineering (ChatGPT, Claude)",
     "Microsoft Office",
     "Excel",
-    "Volleyball",
-    "Golf",
-    "Pickleball",
+    "volleyball",
+    "golf",
+    "pickleball",
   ],
 };

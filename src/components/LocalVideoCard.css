@@ -28,7 +28,7 @@
 
 .local-video-tag {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 14px;
   left: 14px;
   background: rgba(28, 26, 30, 0.55);
@@ -62,4 +62,60 @@
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--color-ink-soft);
+}
+
+.local-video-card-wide .local-video-thumb {
+  aspect-ratio: 16 / 9;
+}
+
+.local-video-card-wide .local-video-thumb video {
+  object-fit: contain;
+}
+
+.local-video-desc {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+
+.local-video-play {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.local-video-play span {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-ink);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.local-video-play:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.local-video-play:hover span {
+  transform: scale(1.08);
+}
+
+.local-video-play:focus-visible span {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { profile, internship, sharpsPR } from "../data/content";
+import { profile, internship, sharpsPR, gallery, classProjects } from "../data/content";
 import SectionHeader from "../components/SectionHeader";
 import LocalVideoCard from "../components/LocalVideoCard";
 import DriveEmbed from "../components/DriveEmbed";
 import InstagramEmbed from "../components/InstagramEmbed";
+import PhotoCollage from "../components/PhotoCollage";
 import "./Home.css";
 
 export default function Home() {
@@ -39,6 +40,15 @@ export default function Home() {
         </div>
       </section>
 
+      {gallery.length > 0 && (
+        <section className="section-alt gallery-section" id="photos">
+          <div className="container">
+            <SectionHeader eyebrow="On Stage & Around Campus" title="Photos" />
+            <PhotoCollage photos={gallery} />
+          </div>
+        </section>
+      )}
+
       <section id="tahoe-artesian">
         <div className="container">
           <SectionHeader
@@ -47,15 +57,11 @@ export default function Home() {
             description={internship.description}
           />
 
-          <p className="video-group-label">Drafts &amp; Concepts</p>
-          <div className="video-grid">
+          <p className="video-group-label">Drafts, concepts &amp; posted content — scroll for more →</p>
+          <div className="video-row">
             {internship.drafts.map((video) => (
               <LocalVideoCard key={video.title} {...video} draft />
             ))}
-          </div>
-
-          <p className="video-group-label video-group-label-spaced">Posted</p>
-          <div className="video-grid">
             {internship.posted.map((video) => (
               <InstagramEmbed key={video.title} url={video.url} title={video.title} views={video.views} />
             ))}
@@ -63,7 +69,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-alt" id="sharps-pr">
+      <section className="section-alt" id="class-projects">
+        <div className="container">
+          <SectionHeader
+            eyebrow={classProjects.eyebrow}
+            title={classProjects.title}
+            description={classProjects.description}
+          />
+          <div className="class-video-grid">
+            {classProjects.videos.map((video) => (
+              <LocalVideoCard key={video.title} {...video} wide />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="sharps-pr">
         <div className="container">
           <SectionHeader eyebrow={sharpsPR.eyebrow} title={sharpsPR.title} description={sharpsPR.description} />
 
@@ -75,7 +96,8 @@ export default function Home() {
             <div className="sharps-ig-placeholder">Full Instagram profile link coming soon</div>
           )}
 
-          <div className="reel-grid">
+          <p className="video-group-label">{sharpsPR.reels.length} reels — scroll for more →</p>
+          <div className="video-row reel-row">
             {sharpsPR.reels.map((reel) => (
               <InstagramEmbed key={reel.title} url={reel.url} title={reel.title} note={reel.note} views={reel.views} />
             ))}
