@@ -42,10 +42,13 @@ export default function PhotoCollage({ photos }) {
               key={photo.src}
               type="button"
               className="collage-tile"
-              style={{ flexGrow: r, flexBasis: `calc(var(--collage-row) * ${r})`, aspectRatio: r }}
+              style={{ flexGrow: r, flexBasis: `calc(var(--collage-row) * ${r})` }}
               onClick={() => setOpen(i)}
               aria-label={`View ${photo.caption} full screen`}
             >
+              {/* Height comes from padding (a % of width), which every browser
+                  sizes the same way, so photos are never stretched or cropped. */}
+              <span className="collage-frame" style={{ paddingBottom: `${100 / r}%` }} />
               <img
                 src={photo.src}
                 alt={photo.caption}
